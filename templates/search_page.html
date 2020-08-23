@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% load static %}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Page</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+
+
+
+
+
+<div class="container">
+  <div class="row row-content align-items-center">
+    <div class="col-12 offset-2 col-sm-8 align-items-center">
+    
+    <div class="col-sm-12formDetails">
+<h2 class="head  d-flex align-items-center justify-content-center row">Search Page</h2>
+     <form class="form-inline my-2 my-lg-0  d-flex align-items-center justify-content-center" action="/consultancy/search/ " method="post">
+
+                   {% csrf_token %}
+
+                    <input class="form-control mr-sm-2 row" type="search" name="name" placeholder="Name" aria-label="Name"/><br>
+                    <input class="form-control mr-sm-2 row" type="search" name="date_of_birth" placeholder="Date of Birth" aria-label="date_of_birth"/>
+                      <br>  <button class="btn btn-success my-2 my-sm-0 row justify-content-center" type="submit">Search</button>
+
+                </form>
+</div>
+  </div></div>
+</div>
+<br>
+<br>
+<!--<div class="form1">-->
+
+	{%if var %}
+    <!-- Button trigger modal -->
+<div class="container">
+  <div class="row ">
+    <div class="col-12 offset-5 col-sm-6 align-items-center">
+    <!-- <div class="col-sm-12"> -->
+<button type="button" class="btn btn-primary btn-lg d-flex align-self-center justify-content-center" data-toggle="modal" data-target="#exampleModalLong">
+  Add+
+</button></div></div></div>
+<br>
+<!-- Modal -->
+<div class="modal fade " id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Follow Up</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <form action="/consultancy/follow_up/" method="POST">
+            {%csrf_token%}
+      <div class="modal-body">
+            <input class="form-control" type="date" name="visit_date" placeholder="visit_date" required><br>
+            <input class="form-control" type="text" name="investigation" placeholder="investigation" required><br>
+            <input class="form-control" type="text" name="history" placeholder="History" required><br>
+          <input placeholder="Next follow-up date" class="form-control" type="text" name="follow_up_date" onfocus="(this.type='date')" required><br>
+            <input class="form-control" type="text" name="advice" placeholder="Advice" required><br>
+          <input type="hidden" name="name" value={{name}}>
+          <input type="hidden" name="dob" value={{dob}}>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-success">Save changes</button>
+      </div>
+            </form>
+    </div>
+  </div>
+</div>
+        <div class="d-flex align-items-center justify-content-center">
+    {%endif%}
+<div class="container">
+  <div class="row row-content align-self-center">
+    <div class="col-12 offset-2 col-sm-8 align-items-center">
+    <div class="card align-self-center">
+      <h3 class="card-header bg-warning text-white">Profile</h3>
+    <div class="card-body">
+    <!-- <div class="col-sm-6"> -->
+{% for i in final_list %}
+<br><br>
+    name:- {{i.0}}
+
+<br><br>
+   phone_number:- {{i.1}}
+<br><br>
+    history:-{{i.2}}
+<br><br>
+    date_of_birth:-{{i.3}}
+<br><br>
+    investigation:- {{i.4}}
+<br><br>
+    visit_date:- {{i.5}}
+<br><br>
+   Advice:- {{i.6}}
+ <br><br>
+  Next Follow-up Date:-{{i.7}}
+
+{%endfor%}
+    </div></div></div>
+
+
+{% for i in final_follow_up %}
+<div class="container">
+  <div class="row row-content">
+    <div class="col-12 offset-2 col-sm-8 align-items-center">
+    <div class="card">
+      <h3 class="card-header bg-warning text-white">Follow update</h3>
+    <div class="card-body">
+  <br><br>
+  visit_date:{{i.0}}
+  <br><br>
+  phone_number:{{i.1}}
+  <br><br>
+  history:{{i.2}}
+  <br><br>
+  advice:{{i.3}}
+</div></div></div></div>
+{% endfor %}
+
+</div>
+</div>
+</div>
+        </div>
+            </div>
+<!--            </div>-->
+</div>
+
+
+</body>
+</html>
+{%endblock%}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+<div class="container">
+    <h2 class="head">Register</h2>
+<form  action="/consultancy/register_user/" method="POST">
+        {% csrf_token %}
+    <br>
+    <br>
+
+            <input class="form-control" type="text" name="name" placeholder="Name" required><br>
+            <input class="form-control" type="number" name="phone_number" placeholder="phone_number" required><br>
+            <input placeholder="Date of birth" class="form-control" type="text" name="date" onfocus="(this.type='date')" required><br>
+            <input placeholder="Visit Date" class="form-control" type="text" name="visit_date" onfocus="(this.type='date')" required><br>
+            <input class="form-control" type="text" name="investigation" placeholder="investigation" required><br>
+            <input class="form-control" type="text" name="history" placeholder="History" required><br>
+            <input class="form-control" type="text-area" name="advice" placeholder="Advice" required><br>
+          <input placeholder="Follow-up Date" class="form-control" type="text" name="follow_up_date" onfocus="(this.type='date')" required><br>
+        <button class="btn btn-outline-success btn-lg btn-block" type="submit">Submit</button><br>
+
+
+    </form>
+    {%for message in messages %}
+    {{message}}
+    {%endfor%}
+</div>
+</body>
+</html>
+{%endblock%}

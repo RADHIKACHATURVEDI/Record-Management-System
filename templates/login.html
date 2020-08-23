@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+<div class="container">
+    <h2 class="head">Login</h2>
+    <form class="form1" action="/consultancy/login_user/" method="post">
+    {% csrf_token %}
+    <br>
+    <br>
+        <div class="formDetails">
+            <div class="form2">
+
+            <input class="bar" type="email" name="email" placeholder="Email/Username"><br>
+    <br>
+    <br>
+
+<input class="bar" type="password" name="password" placeholder="Password"><br>
+<br>
+    <br>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
+        </div>
+        </div>
+</form>
+
+<br><br>
+    </div>
+
+</body>
+</html>
+{%endblock%}

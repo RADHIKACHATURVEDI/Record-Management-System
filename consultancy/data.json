@@ -1,0 +1,45 @@
+{
+  "database": [
+    {
+      "name": "Radhika Chaturvedi",
+      "phone_number": "9685388776",
+      "date_of_birth": "2020-08-23",
+      "visit_date": "2020-08-23",
+      "history": "world",
+      "investigation": "hello",
+      "follow_up_date": "2020-08-23",
+      "advice": "good",
+      "follow_up": []
+    },
+    {
+      "name": "radhika1010",
+      "phone_number": "9685388776",
+      "date_of_birth": "2020-08-30",
+      "visit_date": "2020-08-30",
+      "history": "world",
+      "investigation": "hello",
+      "follow_up_date": "2020-08-05",
+      "advice": "good",
+      "follow_up": [
+        {
+          "visit_date1": "2020-08-28",
+          "investigation1": "hello",
+          "history1": "world",
+          "advice1": "follow"
+        },
+        {
+          "visit_date2": "2020-08-30",
+          "investigation2": "This is a Follow Up model",
+          "history2": "Follow up ",
+          "advice2": "Follow up"
+        },
+        {
+          "visit_date3": "2020-08-13",
+          "investigation3": "3",
+          "history3": "4",
+          "advice3": "6"
+        }
+      ]
+    }
+  ]
+}
