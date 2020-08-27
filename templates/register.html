@@ -14,14 +14,21 @@
         {% csrf_token %}
     <br>
     <br>
-
+            <label for="name">Name</label>
             <input class="form-control" type="text" name="name" placeholder="Name" required><br>
+            <label for="phone_number">Phone Number</label>
             <input class="form-control" type="number" name="phone_number" placeholder="phone_number" required><br>
+            <label for="date">Date Of Birth</label>
             <input placeholder="Date of birth" class="form-control" type="text" name="date" onfocus="(this.type='date')" required><br>
+            <label for="visit_date">Visit Date</label>
             <input placeholder="Visit Date" class="form-control" type="text" name="visit_date" onfocus="(this.type='date')" required><br>
+            <label for="investigation">Investigation</label>
             <input class="form-control" type="text" name="investigation" placeholder="investigation" required><br>
+            <label for="history">History</label>
             <input class="form-control" type="text" name="history" placeholder="History" required><br>
+            <label for="advice">Advice</label>
             <input class="form-control" type="text-area" name="advice" placeholder="Advice" required><br>
+            <label for="follow_up_date">Follow Up Date</label>
           <input placeholder="Follow-up Date" class="form-control" type="text" name="follow_up_date" onfocus="(this.type='date')" required><br>
         <button class="btn btn-outline-success btn-lg btn-block" type="submit">Submit</button><br>
 

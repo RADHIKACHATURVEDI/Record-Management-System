@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e517ff6a-27c0-48e3-b275-59e3570b2463" name="Default Changelist" comment="" />
+    <list default="true" id="e517ff6a-27c0-48e3-b275-59e3570b2463" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consultancy/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/consultancy/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/search_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/search_page.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,19 +21,20 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/project1" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1fonLGZCGapQZdxKRuJt7k5BaF6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -62,18 +68,6 @@
         <item itemvalue="Python.views" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -109,6 +103,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1598092873874" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1598244631715">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1598244631715" />
     <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1598163657452">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
